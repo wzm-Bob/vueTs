@@ -18,7 +18,7 @@ module.exports = {
     filenameHashing: false,
     //pages 参考文档
     //   lintOnSave：{ type:Boolean default:true } 问你是否使用eslint
-    lintOnSave: true,
+    lintOnSave: false,
     //如果你想要在生产构建时禁用 eslint-loader，你可以用如下配置
     // lintOnSave: process.env.NODE_ENV !== 'production',
 
