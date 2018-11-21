@@ -110,12 +110,10 @@
         </Modal>
     </div>
 </template>
-<script>
-//Alt+Shift+F格式化
-export default {
-    name: 'loginWrap',
-    data() {
-        const validateUser = (rule, value, callback) => {
+<script lang="ts">
+import { Component, Vue, Watch } from 'vue-property-decorator';
+//Alt+Shift+F格式化np
+ const validateUser = (rule:any, value:string, callback:any) => {
             if (value === "") {
                 callback(new Error("用户名不能为空"));
             } else if (!/^[a-zA-Z0-9_\u4e00-\u9fa5]+$/.test(value)) {
@@ -124,7 +122,7 @@ export default {
                 callback();
             }
         };
-        const validatePass = (rule, value, callback) => {
+        const validatePass = (rule:any, value:string, callback:any) => {
             if (value === "") {
                 callback(new Error("密码不能为空"));
             } else if (!/^[0-9a-zA-Z]{6,14}$/.test(value)) {
@@ -134,7 +132,7 @@ export default {
                 callback();
             }
         };
-        const validatePhone = (rule, value, callback) => {
+        const validatePhone = (rule:any, value:string, callback:any) => {
             if (value === "") {
                 callback(new Error("手机号不能为空"));
             } else if (
@@ -147,7 +145,7 @@ export default {
                 callback();
             }
         };
-        const validateCaptcha = (rule, value, callback) => {
+        const validateCaptcha = (rule:any, value:string, callback:any) => {
             if (value === "") {
                 callback(new Error("验证码不能为空"));
             } else if (!/^[0-9]*$/.test(value)) {
@@ -156,14 +154,14 @@ export default {
                 callback();
             }
         };
-
-        return {
-            show: true,
-            count: "",
-            timer: null,
-            formLogin: {
+@Component
+export default class Login extends Vue {
+            show= true;
+            count: number | 0 = 0;
+            timer : any;
+            formLogin= {
                 count: "获取验证码",
-                user: "",
+                user: '',
                 single: false,
                 password: "",
                 phone: "",
@@ -171,8 +169,8 @@ export default {
                 loginState: "登录",
                 isDisabled: false,
                 error: ""
-            },
-            ruleCustom: {
+            };
+            ruleCustom= {
                 user: [
                     {
                         validator: validateUser,
@@ -199,13 +197,11 @@ export default {
                     }
                 ]
             }
-        };
-    },
 
-    methods: {
-        See(e) {
+
+        See(e:string) {
             window.location.href = e;
-        },
+        }
         onGetCaptcha() {
             const TIME_COUNT = 59;
             if (!this.timer) {
@@ -221,35 +217,35 @@ export default {
                     }
                 }, 1000);
             }
-        },
+        }
         onTabChange() {
             if (
                 this.formLogin.single == true &&
                 localStorage.getItem("user") &&
                 localStorage.getItem("password")
             ) {
-                this.formLogin.user = localStorage.getItem("user");
-                this.formLogin.password = localStorage.getItem("password");
+               /*  this.formLogin.user = localStorage.getItem("user");
+                this.formLogin.password = localStorage.getItem("password"); */
                 setTimeout(() => {
                     this.$router.push({ name: "IndexPage" });
                 }, 6000);
             }
-        },
-        beforeSubmit(name) {
+        }
+        beforeSubmit(name:string) {
             this.formLogin.isDisabled = true;
             this.formLogin.loginState = "正在登录...";
-        },
-        onSubmit(name) {
-            this.$refs[name].validate(valid => {
+        }
+        onSubmit(name:string) {
+         /*    this.$refs[name].validate((valid: boolean) => {
                 if (valid) {
      
                     this.validBehind(name);
                 } else {
                     return false;
                 }
-            });
-        },
-        validBehind(name) {
+            }); */
+        }
+        validBehind(name:string) {
             debugger
             this.beforeSubmit(name);
             let usermain;
@@ -262,14 +258,14 @@ export default {
                 usercap = this.formLogin.captcha;
             }
             //let loginInfo = this.formLogin;
-            axios.get('/login/login')
+          /*   axios.get('/login/login')
             .then(function (response) {
                 debugger
                 console.log(response);
             })
             .catch(function (error) {
                 console.log(error);
-            });
+            }); */
       
            /*  this.$store
                 .dispatch("login", {
@@ -285,8 +281,8 @@ export default {
                         this.onError(infos);
                     }
                 }); */
-        },
-        onSuccess(res) {
+        }
+        onSuccess(res:Object) {
             debugger
             if (
                 this.formLogin.single == true &&
@@ -301,177 +297,176 @@ export default {
             }
             // console.log('complete!')
             this.$router.push({ name: "IndexPage" });
-        },
-        onError(err) {
+        }
+        onError(err:any) {
             this.$Modal.error({
                 content: err.currentAuthority
             });
 
             this.formLogin.loginState = "登录";
             this.formLogin.isDisabled = false;
-        },
-        formLoginReset(name) {
-            this.$refs[name].resetFields();
         }
-    }
-};
+        formLoginReset(name:string) {
+          //   this.$refs[name].resetFields();
+        }
+}
 </script>
 <style lang="scss" >
 /* （block）、元素（element）、修饰符（modifier)  bem css命名规范*/
 @media (min-width: 768px) {
-    .ivu-layout-content {
-        padding: 112px 0 24px;
-    }
+  .ivu-layout-content {
+    padding: 112px 0 24px;
+  }
 }
 .ivu-layout-content {
-    flex: 1 1;
+  flex: 1 1;
 }
 .ivu-col-span-6 {
-    text-align: right;
+  text-align: right;
 }
 .top___3tcoI {
-    text-align: center;
+  text-align: center;
 }
 .main___2jCiI {
-    width: 368px;
-    margin: 0 auto;
+  width: 368px;
+  margin: 0 auto;
 }
 .header___3StSZ {
-    height: 44px;
-    line-height: 44px;
+  height: 44px;
+  line-height: 44px;
 }
 .ivu-btn-long {
-    height: 40px;
-    font-size: 16px;
-    letter-spacing: 2px;
+  height: 40px;
+  font-size: 16px;
+  letter-spacing: 2px;
 }
 .ivu-checkbox-wrapper {
-    font-size: 14px;
+  font-size: 14px;
 }
 .ivu-tabs-nav {
-    width: 100%;
-    margin: 4px 0;
+  width: 100%;
+  margin: 4px 0;
 }
 .ivu-radio-wrapper,
 .add__margin span {
-    font-size: 14px;
-    margin-right: 4px;
+  font-size: 14px;
+  margin-right: 4px;
 }
 .forget {
-    color: #57a3f3;
+  color: #57a3f3;
 }
 .ivu-btn-ghost {
-    height: 40px;
-    background: #fff;
-    font-size: 16px;
-    color: rgba(0, 0, 0, 0.65);
-    padding: 6px 12px;
+  height: 40px;
+  background: #fff;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.65);
+  padding: 6px 12px;
 }
 .ivu-icon {
-    font-size: 20px;
+  font-size: 20px;
 }
 .ivu-tabs-nav .ivu-tabs-tab {
-    font-size: 16px;
+  font-size: 16px;
 }
 .ivu-input {
-    height: 40px;
-    outline: none;
+  height: 40px;
+  outline: none;
 }
 .ivu-tabs-nav-scroll {
-    text-align: center;
+  text-align: center;
 }
 .ivu-tabs-ink-bar {
-    left: 40px;
+  left: 40px;
 }
 .ivu-tabs-bar {
-    border-bottom: none;
-    margin-bottom: 24px;
+  border-bottom: none;
+  margin-bottom: 24px;
 }
 .ivu-input-group-append,
 .ivu-input-group-prepend {
-    background: #fff;
-    border-radius: 3px;
+  background: #fff;
+  border-radius: 3px;
 }
 .ivu-input-group-append,
 .ivu-input-group > .ivu-input:last-child {
-    border-left: 0;
+  border-left: 0;
 }
 .header___3StSZ a {
-    text-decoration: none;
+  text-decoration: none;
 }
 .logo___2CWIy {
-    height: 44px;
-    vertical-align: top;
-    margin-right: 16px;
+  height: 44px;
+  vertical-align: top;
+  margin-right: 16px;
 }
 .title___2h165 {
-    font-size: 33px;
-    color: rgba(0, 0, 0, 0.85);
-    font-family: "Myriad Pro", "Helvetica Neue", Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    position: relative;
-    top: 2px;
+  font-size: 33px;
+  color: rgba(0, 0, 0, 0.85);
+  font-family: "Myriad Pro", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  position: relative;
+  top: 2px;
 }
 .desc___i73Yc {
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.45);
-    margin-top: 12px;
-    margin-bottom: 40px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.45);
+  margin-top: 12px;
+  margin-bottom: 40px;
 }
 .index__links___1TMBe {
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 .index__copyright___3hvsv {
-    color: rgba(0, 0, 0, 0.45);
-    font-size: 14px;
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 14px;
 }
 
 .index__links___1TMBe a:not(:last-child) {
-    margin-right: 40px;
+  margin-right: 40px;
 }
 
 .index__links___1TMBe a {
-    color: rgba(0, 0, 0, 0.45);
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
+  color: rgba(0, 0, 0, 0.45);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .ivu-modal-confirm-footer {
-    margin-top: 0;
+  margin-top: 0;
 }
 .ivu-btn-large {
-    padding: 2px 8px;
+  padding: 2px 8px;
 }
 .ivu-layout-footer {
-    margin: 0 auto;
-    text-align: center;
+  margin: 0 auto;
+  text-align: center;
 }
 .layout {
-    background-image: url(https://gw.alipayobjects.com/zos/rmsportal/TVYTbAXWheQpRcWDaDMu.svg);
-    background-repeat: no-repeat;
-    background-position: center 110px;
-    background-size: 100%;
+  background-image: url(https://gw.alipayobjects.com/zos/rmsportal/TVYTbAXWheQpRcWDaDMu.svg);
+  background-repeat: no-repeat;
+  background-position: center 110px;
+  background-size: 100%;
 }
 .anticon {
-    display: inline-block;
-    font-style: normal;
-    vertical-align: baseline;
-    text-align: center;
-    text-transform: none;
-    line-height: 1;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  font-style: normal;
+  vertical-align: baseline;
+  text-align: center;
+  text-transform: none;
+  line-height: 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .anticon-copyright:before {
-    content: "\E6DE";
+  content: "\E6DE";
 }
 .anticon:before {
-    display: block;
-    font-family: "anticon" !important;
+  display: block;
+  font-family: "anticon" !important;
 }
 .ivu-layout-footer a,
 .ivu-layout-footer .index__copyright___3hvsv {
-    color: rgba(0, 0, 0, 0.45);
+  color: rgba(0, 0, 0, 0.45);
 }
 </style>
 
