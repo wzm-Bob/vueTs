@@ -7,3 +7,7 @@ declare module "*.vue" {
 在ts代码中导入vue代码包，需要写成 import xxx form xxx.vue ，
 需要带上后缀 vue
  */
+declare module '*.svg' {
+  import Vue from 'vue';
+  export default Vue;
+}
