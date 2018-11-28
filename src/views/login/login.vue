@@ -17,7 +17,7 @@
                         <Row class='add__margin'>
                             <Col span='18'>
                             <!--注意事件要用@监听 属性要用：绑定-->
-                            <Checkbox @on-change='onTabChange' v-model='formLogin.single'>自动登录</Checkbox>
+                            <Checkbox  v-model='formLogin.single'>自动登录</Checkbox>
                             </Col>
                             <Col span='6'>
                             <span class='forget'>
@@ -27,7 +27,7 @@
                         </Row>
                     </FormItem>
                     <FormItem>
-                        <Button type='primary' @click='onSubmit(`account`)' :disabled='formLogin.isDisabled' :class='{disabled: formLogin.isDisabled}' long>{{formLogin.loginState}}</Button>
+                        <Button type='primary' @click.native.prevent='onSubmit(`account`)' :disabled='formLogin.isDisabled' :class='{disabled: formLogin.isDisabled}' long>{{formLogin.loginState}}</Button>
                         <!--  <Button type='primary'  @click='formLoginReset('formLogin')' long>重置</Button> -->
                     </FormItem>
                 </Form>
@@ -60,7 +60,7 @@
                     <FormItem>
                         <Row class='add__margin'>
                             <Col span='18'>
-                            <Checkbox on-change='onTabChange' v-model='formLogin.single'>自动登录</Checkbox>
+                            <Checkbox  v-model='formLogin.single'>自动登录</Checkbox>
                             </Col>
                             <Col span='6'>
                             <span class='forget'>
@@ -70,7 +70,7 @@
                         </Row>
                     </FormItem>
                     <FormItem>
-                        <Button type='primary' @click='onSubmit(`mobile`)' :disabled='formLogin.isDisabled' :class='{disabled: formLogin.isDisabled}' long>{{formLogin.loginState}}</Button>
+                        <Button type='primary' @click.native.prevent='onSubmit(`mobile`)' :disabled='formLogin.isDisabled' :class='{disabled: formLogin.isDisabled}' long>{{formLogin.loginState}}</Button>
                         <!--  <Button type='primary'  @click='formLoginReset('formLogin')' long>重置</Button> -->
                     </FormItem>
                 </Form>
@@ -161,7 +161,7 @@ export default class Login extends Vue {
             timer : any;
             formLogin= {
                 count: "获取验证码",
-                user: '',
+                user:'',
                 single: false,
                 password: "",
                 phone: "",
@@ -218,32 +218,19 @@ export default class Login extends Vue {
                 }, 1000);
             }
         }
-        onTabChange() {
-            if (
-                this.formLogin.single == true &&
-                localStorage.getItem("user") &&
-                localStorage.getItem("password")
-            ) {
-               /*  this.formLogin.user = localStorage.getItem("user");
-                this.formLogin.password = localStorage.getItem("password"); */
-                setTimeout(() => {
-                    this.$router.push({ name: "IndexPage" });
-                }, 6000);
-            }
-        }
         beforeSubmit(name:string) {
             this.formLogin.isDisabled = true;
             this.formLogin.loginState = "正在登录...";
         }
         onSubmit(name:string) {
-         /*    this.$refs[name].validate((valid: boolean) => {
+            (this.$refs[name] as Form).validate((valid: boolean) => {
                 if (valid) {
      
                     this.validBehind(name);
                 } else {
                     return false;
                 }
-            }); */
+            }); 
         }
         validBehind(name:string) {
             debugger
