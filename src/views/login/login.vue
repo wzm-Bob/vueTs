@@ -113,6 +113,7 @@
 <script lang="ts">
 import { Component, Vue, Watch } from 'vue-property-decorator';
 //Alt+Shift+F格式化np
+import { Form as cForm } from "iview";
  const validateUser = (rule:any, value:string, callback:any) => {
             if (value === "") {
                 callback(new Error("用户名不能为空"));
@@ -159,6 +160,7 @@ export default class Login extends Vue {
             show= true;
             count: number | 0 = 0;
             timer : any;
+           
             formLogin= {
                 count: "获取验证码",
                 user:'',
@@ -223,9 +225,8 @@ export default class Login extends Vue {
             this.formLogin.loginState = "正在登录...";
         }
         onSubmit(name:string) {
-            (this.$refs[name] as Form).validate((valid: boolean) => {
+            (this.$refs[name] as cForm).validate((valid: boolean) => {
                 if (valid) {
-     
                     this.validBehind(name);
                 } else {
                     return false;
@@ -245,7 +246,7 @@ export default class Login extends Vue {
                 usercap = this.formLogin.captcha;
             }
             //let loginInfo = this.formLogin;
-          /*   axios.get('/login/login')
+          /* axios.get('/login/login')
             .then(function (response) {
                 debugger
                 console.log(response);
@@ -289,7 +290,6 @@ export default class Login extends Vue {
             this.$Modal.error({
                 content: err.currentAuthority
             });
-
             this.formLogin.loginState = "登录";
             this.formLogin.isDisabled = false;
         }

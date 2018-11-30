@@ -23,6 +23,7 @@
     "@vue/eslint-config-prettier": "^3.0.5",
     "@vue/eslint-config-typescript": "^3.0.5",
     "axios": "^0.18.0",
+    "babel-plugin-import": "^1.11.0",
     "mockjs": "^1.0.1-beta3",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
