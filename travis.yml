@@ -34,7 +34,7 @@ script:
 #env:
 # global:
 #  - GH_REF: github.com/wzm-Bob/vueTs.git
-# - GH_TOKEN:329d605e50f2f988bdcd0dd3addaec049c27cfdb
+# - GH_TOKEN:75862cb46dea1433a9ce033ba123a3afd756e468 
 #- P_BRANCH:gh-pages
 # - U_EMILE:17797592879@189.cn
 # - U_NAME:wzm-Bob
