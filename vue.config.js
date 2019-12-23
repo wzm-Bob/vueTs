@@ -3,6 +3,7 @@ const webpack = require("webpack");
 module.exports = {
   productionSourceMap: true,
   runtimeCompiler: true,
+  lintOnSave:false,
   //baseUrl: process.env.NODE_ENV === 'production' ? '/online/' : '/',
   devServer: {
     port: 8080, // 端口号

@@ -1,5 +1,5 @@
 module.exports = {
-  root: true,
+/*   root: true,
   env: {
     node: true
   },
@@ -12,5 +12,5 @@ module.exports = {
   },
   parserOptions: {
     parser: "@typescript-eslint/parser"
-  }
+  } */
 };
