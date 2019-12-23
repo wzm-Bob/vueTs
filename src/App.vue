@@ -10,7 +10,7 @@ import { Component, Vue } from "vue-property-decorator";
 @Component({
   name: "App",
   components: {}
-  //这里放name components filters等等
+  //这里放name components filters
 })
 export default class extends Vue {
 

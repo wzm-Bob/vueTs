@@ -1,10 +1,10 @@
 module.exports = {
-/*   root: true,
+  root: true,
   env: {
     node: true
   },
   //"@vue/prettier",
-  extends: ["plugin:vue/essential",  "@vue/typescript"],
+  extends: ["plugin:vue/essential", "@vue/typescript"],
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
@@ -12,5 +12,5 @@ module.exports = {
   },
   parserOptions: {
     parser: "@typescript-eslint/parser"
-  } */
+  }
 };
