@@ -1,0 +1,198 @@
+@font-face {
+    font-family: "fztyst";
+    src: url("~@/assets/css/font/fztyst.eot");
+    src: url("~@/assets/css/font/fztyst.eot?#iefix") format("embedded-opentype"),
+        url("~@/assets/css/font/fztyst.woff2") format("woff2"),
+        url("~@/assets/css/font/fztyst.woff") format("woff"),
+        url("~@/assets/css/font/fztyst.ttf") format("truetype"),
+        url("~@/assets/css/font/fztyst.svg#BigNoodleTitling") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "reducto_condensed_ssiCn";
+    src: url("~@/assets/css/font/reducto_condensed_ssi_condensed-webfont.eot");
+    src: url("~@/assets/css/font/reducto_condensed_ssi_condensed-webfont.eot?#iefix")
+            format("embedded-opentype"),
+        url("~@/assets/css/font/reducto_condensed_ssi_condensed-webfont.woff2")
+            format("woff2"),
+        url("~@/assets/css/font/reducto_condensed_ssi_condensed-webfont.woff")
+            format("woff"),
+        url("~@/assets/css/font/reducto_condensed_ssi_condensed-webfont.ttf")
+            format("truetype"),
+        url(
+                "~@/assets/css/font/reducto_condensed_ssi_condensed-webfont.svg#reducto_condensed_ssiCn"
+            )
+            format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 10px;
+    background-color: #fff;
+}
+/*滚动条的轨道*/
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+/*滚动条的滑块按钮*/
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #cfd2d4;
+    box-shadow: inset 0 0 5px #cfd2d4;
+}
+/* 弹层 */
+.fullscreenModalLayer .ivu-modal-content .ivu-modal-header,
+.normalModalLayer .ivu-modal-content .ivu-modal-header {
+    height: 30px;
+    padding: 0 10px;
+    background: #0d69c7;
+}
+.fullscreenModalLayer
+    .ivu-modal-content
+    .ivu-modal-header
+    .ivu-modal-header-inner,
+.normalModalLayer .ivu-modal-content .ivu-modal-header .ivu-modal-header-inner {
+    line-height: 30px;
+}
+.fullscreenModalLayer .ivu-modal-content .ivu-modal-close,
+.normalModalLayer .ivu-modal-content .ivu-modal-close {
+    top: 4px;
+}
+.fullscreenModalLayer .ivu-modal-content .ivu-modal-close .ivu-icon-ios-close,
+.normalModalLayer .ivu-modal-content .ivu-modal-close .ivu-icon-ios-close {
+    font-size: 0;
+    width: 20px;
+    height: 20px;
+    background: url(~@/assets/img/basic/close-icon.png) no-repeat center;
+    background-size: 100% 100%;
+}
+.fullscreenModalLayer .ivu-modal-fullscreen .ivu-modal-footer,
+.normalModalLayer .ivu-modal-fullscreen .ivu-modal-footer {
+    display: none;
+}
+.fullscreenModalLayer .ivu-modal-fullscreen .ivu-modal-body,
+.normalModalLayer .ivu-modal-fullscreen .ivu-modal-body {
+    top: 30px;
+    bottom: 0;
+}
+.fullscreenModalLayer .ivu-modal-mask,
+.normalModalLayer .ivu-modal-mask {
+    background: rgba(220, 226, 241, 0.4);
+}
+.fullscreenModalLayer .ivu-modal-wrap,
+.normalModalLayer .ivu-modal-wrap {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+}
+.fullscreenModalLayer .ivu-modal-fullscreen .ivu-modal-footer {
+    display: none;
+}
+.fullscreenModalLayer .ivu-modal-fullscreen .ivu-modal-body {
+    top: 30px;
+    bottom: 0;
+}
+.fullscreenModalLayer .ivu-modal-mask {
+    background: rgba(220, 226, 241, 0.4);
+}
+.fullscreenModalLayer .ivu-modal-wrap {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+}
+.normalModalLayer .ivu-modal-fullscreen {
+    width: 864px !important;
+    height: 530px;
+    border: 1px solid #0d69c7;
+    position: absolute;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    margin-left: -432px !important;
+    // transform: translate(-50%, -50%);
+}
+.normalModalLayer .ivu-modal-fullscreen .ivu-modal-footer {
+    display: none;
+}
+.normalModalLayer .ivu-modal-fullscreen .ivu-modal-body {
+    top: 30px;
+    bottom: 0;
+}
+.normalModalLayer .ivu-modal-mask {
+    background: rgba(220, 226, 241, 0.4);
+}
+/* table表格操作按钮 */
+.tableBtn {
+    border-radius: 4px;
+    border: 1px solid #2d8cf0;
+    cursor: pointer;
+    font-size: 12px;
+    white-space: nowrap;
+    box-sizing: border-box;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 12px;
+    outline: none;
+}
+/* 查询 */
+.queryBtn {
+    color: #fff;
+    background: #2d8cf0;
+}
+/* 详情 */
+.detailsBtn {
+    color: #2d8cf0;
+    background: #fff;
+    height: 22px;
+    line-height: 22px;
+}
+/* 重置 */
+.resetBtn {
+    border: solid 1px #dcdee2;
+    color: #333;
+    background: #f0f0f0;
+}
+/* 导出 */
+.exportBtn {
+    color: #fff;
+    background: #f0ad4e;
+    border: 1px solid #ffac37;
+}
+.detailsBtn:hover {
+    color: #57a3f3;
+    background: rgba(245, 249, 254, 0.5);
+}
+.resetBtn:hover {
+    background: #e0e0e0;
+}
+.queryBtn:hover {
+    background-color: #57a3f3;
+    border-color: #57a3f3;
+}
+.exportBtn:hover {
+    background-color: #ffad33;
+    border-color: #ffad33;
+}
+
+//iview列表高度统一
+#app {
+    .ivu-table td,
+    .ivu-table th {
+        height: 40px;
+    }
+    .ivu-table-cell {
+        padding: 0 10px;
+    }
+    // .ivu-table-overflowX{
+    //   overflow-x: hidden;
+    // }
+    // .ivu-table-tip{
+    //   overflow: hidden;
+    // }
+}

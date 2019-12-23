@@ -1,0 +1,142 @@
+.siderbarTitle{
+    padding: 15px 15px 15px 48px;
+    border-bottom: #cfd9db 1px solid;
+    .span{
+        height: 20px;
+        line-height: 20px;
+        font-weight: bold;
+        padding: 6px 0 6px 0;
+        font-size: 20px;
+        color: #2d8cf0;
+    }
+}
+.hyzc{
+    .siderbarTitle::before{
+        content:"";
+        width: 24px;
+        height: 28px;
+        position: absolute;
+        top: 12px;
+        left: 14px;
+        background: url(../img/base/policy-icon.png) no-repeat center;
+        background-size: 100% 100%;
+    }
+    .ivu-menu-submenu-title{
+        i{
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+}
+.hyzcdj{
+    .siderbarTitle::before{
+        content:"";
+        width: 28px;
+        height: 28px;
+        position: absolute;
+        top: 12px;
+        left: 14px;
+        background: url(../img/base/butt_join.png) no-repeat center;
+        background-size: 100% 100%;
+    }
+    .ivu-menu-submenu-title{
+        .namePrev{
+            display: inline-block;
+            vertical-align: middle;
+            width: 3px;
+            height: 16px;
+            background: #999;
+        }
+    }
+    .ivu-menu-submenu-title:hover,.ivu-menu-opened{
+        .namePrev{
+            background: #2d8cf0;
+        }
+    }
+}
+.hyzc.ivu-menu-vertical,.threeLayout {
+    .jiaoyufp_icon{
+        background: url(../img/policyMenu/jiaoyufp_icon.png) no-repeat center;
+        background-size: 100% 100%;
+    }
+    .yinshuiaqbz_icon{
+        background: url(../img/policyMenu/yinshuiaqbz_icon.png) no-repeat center;
+        background-size: 100% 100%;
+    }
+    .chanyefp_icon{
+        background: url(../img/policyMenu/chanyefp_icon.png) no-repeat center;
+        background-size: 100% 100%;
+    }
+    .jiankangfp_icon{
+        background: url(../img/policyMenu/jiankangfp_icon.png) no-repeat center;
+        background-size: 100% 100%;
+    }
+    .jinrongfp_icon{
+        background: url(../img/policyMenu/jinrongfp_icon.png) no-repeat center;
+        background-size: 100% 100%;
+    }
+    .jiuyefp_icon{
+        background: url(../img/policyMenu/jiuyefp_icon.png) no-repeat center;
+        background-size: 100% 100%;
+    }
+    .shengtaifp_icon{
+        background: url(../img/policyMenu/shenghuofp_icon.png) no-repeat center;
+        background-size: 100% 100%;
+    }
+    .weifanggz_icon{
+        background: url(../img/policyMenu/weifanggz_icon.png) no-repeat center;
+        background-size: 100% 100%;
+    }
+    .yidibq_icon{
+        background: url(../img/policyMenu/yidibq_icon.png) no-repeat center;
+        background-size: 100% 100%;
+    }
+    .zonghebz_icon{
+        background: url(../img/policyMenu/zonghebz_icon.png) no-repeat center;
+        background-size: 100% 100%;
+    }
+    .ivu-menu-item:hover,.ivu-menu-submenu-title:hover,.ivu-menu-opened .ivu-menu-submenu-title,.threeMenu.active,.threeMenu:hover{
+        .jiaoyufp_icon{
+            background: url(../img/policyMenu/jiaoyufp_h_icon.png) no-repeat center;
+            background-size: 100% 100%;
+        }
+        .yinshuiaqbz_icon{
+            background: url(../img/policyMenu/yinshuiaqbz_h_icon.png) no-repeat center;
+            background-size: 100% 100%;
+        }
+        .chanyefp_icon{
+            background: url(../img/policyMenu/chanyefp_h_icon.png) no-repeat center;
+            background-size: 100% 100%;
+        }
+        .jiankangfp_icon{
+            background: url(../img/policyMenu/jiankangfp_h_icon.png) no-repeat center;
+            background-size: 100% 100%;
+        }
+        .jinrongfp_icon{
+            background: url(../img/policyMenu/jinrongfp_h_icon.png) no-repeat center;
+            background-size: 100% 100%;
+        }
+        .jiuyefp_icon{
+            background: url(../img/policyMenu/jiuyefp_h_icon.png) no-repeat center;
+            background-size: 100% 100%;
+        }
+        .shengtaifp_icon{
+            background: url(../img/policyMenu/shenghuofp_h_icon.png) no-repeat center;
+            background-size: 100% 100%;
+        }
+        .weifanggz_icon{
+            background: url(../img/policyMenu/weifanggz_h_icon.png) no-repeat center;
+            background-size: 100% 100%;
+        }
+        .yidibq_icon{
+            background: url(../img/policyMenu/yidibq_h_icon.png) no-repeat center;
+            background-size: 100% 100%;
+        }
+        .zonghebz_icon{
+            background: url(../img/policyMenu/zonghebz_h_icon.png) no-repeat center;
+            background-size: 100% 100%;
+        }
+    }
+}

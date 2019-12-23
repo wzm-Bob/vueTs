@@ -1,0 +1,133 @@
+/*
+    项目iview主题样式修改
+
+@import '~iview/src/styles/index.less';
+*/
+$primary-color:#cf2b1e;
+.ivu-table-wrapper{
+    border: 1px solid #e5e5e5;
+    border-bottom: 0;
+    border-right: 0;
+}
+
+.ivu-table{
+    font-size: 12px;
+
+    th{
+        font-weight: normal;
+    }
+
+    th, td{
+        border-right: 1px solid #e5e5e5;
+        height: 40px;
+    }
+
+    td.action{
+        & > div{
+            padding:0;
+        }
+
+        div{
+            button:not(:last-child){
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .ellipsis{
+        .ivu-table-cell{
+            & > div{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    .cursor{
+        cursor: pointer;
+    }
+}
+
+
+.ivu-input{
+    border-radius: 0;
+    font-size: 12px;
+}
+
+.ivu-input-group{
+    font-size:12px;
+}
+
+.size-40{
+    .ivu-input{
+        height: 40px;
+    }
+}
+.ivu-picker-panel-body{
+    font-size: 12px;
+}
+
+
+
+
+.ivu-modal-content{
+    border-radius: 0;
+
+    .msg-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90px;
+        font-size: 16px;
+    }
+    
+    .ivu-modal-header{
+        height: 35px;
+        padding:0 16px;
+        background: $primary-color;
+    
+        .ivu-modal-header-inner{
+            height: 100%;
+            line-height: 35px;
+            color: #fff;
+            font-weight: normal;
+        }
+    }
+    
+    .ivu-modal-close{
+        right: 12px;
+        top: 7px;
+    
+        .ivu-icon-ios-close{
+            font-size: 19px;
+    
+            &::before{
+                color: transparent;
+                /* 绝对路径 */
+                background: url(~@/assets/img/base/ht-dialog-close.png) no-repeat;
+            }
+        }
+    }
+    
+    .ivu-modal-footer{
+        text-align: center;
+    
+        .ivu-btn-large{
+            padding:4px 15px;
+        }
+    }
+}
+
+.ivu-form{
+    .ivu-form-item-label{
+        font-size: 12px;
+    }
+    .ivu-radio-wrapper{
+        font-size: 12px;
+    }
+} 
+
+.ivu-btn-small {
+    padding: 1px 12px 2px;
+}

@@ -1,0 +1,225 @@
+.h-left {
+    float: left;
+    color: #fff;
+    line-height: 1;
+    font-family: "fztyst";
+    font-size: 32px;
+    margin-top: 19px;
+    text-shadow: 1px 1px 3px #0137a9;
+}
+.h-right {
+    float: right;
+    height: 100%;
+    color: #fff;
+    font-size: 16px;
+}
+.h-right .menu-wrap {
+    float: left;
+    margin-top: 22px;
+}
+.h-right .menu-wrap > div,
+.h-right .menu-wrap > em {
+    display: inline-block;
+    vertical-align: middle;
+}
+.h-right .menu-wrap span {
+    line-height: 16px;
+}
+.h-right .menu-line {
+    width: 1px;
+    background: #fff;
+    margin: 0 15px;
+    height: 50px;
+}
+.h-right .user {
+    float: right;
+    position: relative;
+    padding-bottom: 10px;
+    z-index: 999;
+}
+.h-right .user:hover .user-operator {
+    display: block;
+}
+.h-right .user-info {
+    cursor: pointer;
+}
+.h-right .user-info:after {
+    content: " ";
+    display: inline-block;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #fff;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+.h-right .user-info i {
+    display: inline-block;
+    vertical-align: middle;
+    width: 23px;
+    height: 23px;
+    background: url("~@/assets/img/homePage/exit-icon2.png") no-repeat center;
+    background-size: 100% 100%;
+    margin-right: 12px;
+}
+.h-right .user-info span {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+}
+.nav {
+    float: left;
+    height: 100%;
+    margin-right: 30px;
+    margin-top: 22px;
+}
+.nav .nav-item {
+    float: left;
+    margin-right: 5px;
+    cursor: pointer;
+    position: relative;
+    z-index: 999;
+}
+.nav .nav-item .link {
+    display: block;
+    height: 32px;
+    line-height: 14px;
+    padding: 10px 10px 8px 45px;
+    background-color: #cfd2d4;
+    background-repeat: no-repeat;
+    font-size: 15px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    color: #4a4a4a;
+    margin: 15px 8px 0px;
+    padding: 0.7em 6px 0.5em;
+}
+.nav .nav-item.active .link {
+    background-color: #f4f5f7;
+    border-color: #d21010;
+    color: #f50200;
+}
+.nav span:before {
+    content: " ";
+    display: block;
+}
+.back-home {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 40px;
+}
+.back-home:before {
+    content: " ";
+    display: inline-block;
+    margin-right: 5px;
+    width: 24px;
+    height: 21px;
+    vertical-align: middle;
+    background: url(~@/assets/img/header/logout.png) no-repeat center center;
+}
+.content {
+    padding: 0 56px;
+    height: 70px;
+    background: url(~@/assets/img/header/header-bg.png) no-repeat center;
+    background-size: 100% 100%;
+}
+.content .user-operator {
+    display: none;
+    width: 82px;
+    padding-left: 8px;
+    color: #666;
+    font-size: 12px;
+    position: absolute;
+    left: 14px;
+    top: 34px;
+    background: #fff;
+    border-radius: 5px;
+}
+.content .user-operator li {
+    line-height: 31px;
+    cursor: pointer;
+    list-style: none;
+}
+.content .user-operator li i {
+    display: inline-block;
+    vertical-align: middle;
+}
+.content .user-operator li span {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+.content .user-operator li:hover {
+    color: #333;
+}
+.content .user-operator li:first-child i {
+    width: 12px;
+    height: 12px;
+    background: url("~@/assets/img/homePage/user-icon1.png") no-repeat center;
+}
+.content .user-operator li:nth-child(2) i {
+    width: 12px;
+    height: 12px;
+    background: url("~@/assets/img/homePage/user-icon2.png") no-repeat center;
+}
+.content .user-operator li:last-child i {
+    width: 11px;
+    height: 12px;
+    background: url("~@/assets/img/homePage/user-icon3.png") no-repeat center;
+}
+.content .triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-width: 0 8px 8px;
+    border-style: solid;
+    border-color: transparent transparent #fff;
+    top: -8px;
+    left: 34px;
+}
+.HP-page {
+    background: url("~@/assets/img/login/title-bg.png") no-repeat center;
+    background-size: 100% 100%;
+}
+.basic-head {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+.basic-head .content .back-home {
+    margin-top: 22px;
+}
+.basic-head .content .nav {
+    height: auto;
+    margin-top: 23px;
+}
+.basic-head .content .nav li {
+    display: inline-block;
+    margin: 0 8px;
+}
+.basic-head .content .nav li.activeClass .link {
+    background-color: #fff;
+    color: #0d69c7;
+}
+.basic-head .content .nav li .link {
+    display: block;
+    height: 32px;
+    line-height: 14px;
+    padding: 10px;
+    background-color: #cfd2d4;
+    background-repeat: no-repeat;
+    font-size: 15px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    color: #767676;
+}
+.main-content {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+}

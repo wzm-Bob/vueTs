@@ -1,0 +1,120 @@
+.statistical{
+    background: #fffbe9;
+    padding: 10px;
+    line-height: 22px;
+    border: 1px solid #f1e8c1;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    h3{
+        color: #ef4c1a;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #f1e8c1;
+        margin-bottom: 5px;
+        text-align: left;
+        i{
+            display: inline-block;
+            vertical-align: middle;
+            width: 15px;
+            height: 18px;
+            background: url(../img/analysis/tip-icon.png) no-repeat center;
+            background-size: 100% 100%;
+            margin-right: 6px;
+        }
+        span{
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+    ul{
+        li{
+            font-size: 14px;
+            color: #f75700;
+            text-indent: 1.5em;
+            text-align: left;
+        }
+    }
+}
+.poverty{
+    .query-criteria{
+        border-bottom: 1px solid #e8eaec;
+        margin-bottom: 12px;
+        position: relative;
+        .query-btn{
+            position: absolute;
+            bottom: 10px;
+            right: 0;
+        }
+    }
+    .ivu-form-item-content{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .ivu-form-item .ivu-form-item .ivu-form-item-content{
+        margin-left: 80px!important;
+    }
+    .ivu-form .ivu-form-item-label {
+        display: inline-block;
+        width: 72px;
+        font-size: 14px;
+        color: #a8a7a7;
+        white-space: nowrap;
+        float: none;
+        padding: 10px 2px 10px 0;
+    }
+    .admin-area .select{
+        margin-top: -1px;
+    }
+    .admin-area .input-readonly{
+        height: 33px;
+    }
+    .row{
+        margin: 6px 0;
+        .ivu-form-item{
+            margin-bottom: 0;
+        }
+        input{
+            float: left;
+            color: #555;
+            margin-right: 10px;
+            border-radius: 12px;
+            text-align: center;
+            padding: 2px 6px;
+            cursor: pointer;
+            font-size: 14px;
+            line-height: 22px;
+            outline: none;
+            border:none;
+            background-color: #ffffff;
+        }
+        .dd-active{
+            background: #2d8cf0;
+            color: #fff;
+            animation: tagChose 0.5s;
+        }
+    }
+    @keyframes tagChose{
+        0%{
+            transform: scale(0.5);  /*开始为原始大小*/
+        }
+        25%{
+            transform: scale(1); /*放大1.1倍*/
+        }
+        50%{
+            transform: scale(0.8);
+        }
+        75%{
+            transform: scale(1.1);
+        }
+        100%{
+            transform: scale(1);
+        }
+    }
+}
+#tableCon{
+    /* 滚动条美化 */
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 10px;
+        background-color: #fff;
+    }
+}
