@@ -4,29 +4,36 @@ node_js:
   - "8"
   - "9"
   - "10"
-
-addons:
-  chrome: stable
+  - "12"
 
 install:
   - npm install
 
 script:
-  - npm run build
+ # - npm run build
+   - npm run test:unit
+# before_install 安装阶段之前
+# install 安装
+# before_script 脚本阶段之前
+# script 脚本阶段
+# aftersuccess or afterfailure 脚本成功或失败
+# [OPTIONAL] before_deploy 部署之前
+# [OPTIONAL] deploy 部署
+# [OPTIONAL] after_deploy 部署之后
+# after_script 脚本阶段之后
+# after_success:
+#   # 自动部署配置
+#   - cd ./dist
+#   - git init
+#   - git config --global user.name "${U_NAME}"
+#   - git config --global user.email "${U_EMAIL}"
+#   - git add .
+#   - git commit -m "Automatically update from travis-ci"
+#   - git push --quiet --force  "https://${GH_TOKEN}@${GH_REF}" master:${P_BRANCH}
 
-after_success:
-  # 自动部署配置
-  - cd ./dist
-  - git init
-  - git config --global user.name "${U_NAME}"
-  - git config --global user.email "${U_EMAIL}"
-  - git add .
-  - git commit -m "Automatically update from travis-ci"
-  - git push --quiet --force  "https://${GH_TOKEN}@${GH_REF}" master:${P_BRANCH}
-
-branches:
-  only:
-    - master
+# branches:
+#   only:
+#     - master
 #env:
 # global:
 #  - GH_REF: github.com/wzm-Bob/vueTs.git
