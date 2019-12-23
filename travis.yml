@@ -1,9 +1,6 @@
 language: node_js
 
 node_js:
-  - "8"
-  - "9"
-  - "10"
   - "12"
 
 install:
@@ -11,7 +8,7 @@ install:
 
 script:
  # - npm run build
-   - npm run test:unit
+   - npm run test:auto
 # before_install 安装阶段之前
 # install 安装
 # before_script 脚本阶段之前
