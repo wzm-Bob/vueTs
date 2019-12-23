@@ -1,6 +1,6 @@
 import request from "@/utils/axios";
 
-//贫困户管理贫困户列表接口
+//贫困户管理贫困户列表接口接口修改
 export const getPoorFamilyList = (params: any) =>
   request({
     url: `/basicApi/poorFamily/getPoorFamilyList`,
