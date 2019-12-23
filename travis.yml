@@ -19,3 +19,10 @@ after_success:
 branches:
   only:
     - master
+env:
+  global:
+    - GH_REF: github.com/wzm-Bob/vueTs.git
+    - GH_TOKEN:329d605e50f2f988bdcd0dd3addaec049c27cfdb 
+    - P_BRANCH:gh-pages
+    - U_EMILE:17797592879@189.cn
+    - U_NAME:wzm-Bob
