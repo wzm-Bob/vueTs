@@ -1,13 +1,21 @@
 language: node_js
+
 node_js:
   - "8"
+  - "9"
+  - "10"
+
+addons:
+  chrome: stable
 
 install:
   - npm install
 
 script:
   - npm run build
+
 after_success:
+  # 自动部署配置
   - cd ./dist
   - git init
   - git config --global user.name "${U_NAME}"
@@ -19,10 +27,10 @@ after_success:
 branches:
   only:
     - master
-env:
-  global:
-    - GH_REF: github.com/wzm-Bob/vueTs.git
-    - GH_TOKEN:329d605e50f2f988bdcd0dd3addaec049c27cfdb 
-    - P_BRANCH:gh-pages
-    - U_EMILE:17797592879@189.cn
-    - U_NAME:wzm-Bob
+#env:
+# global:
+#  - GH_REF: github.com/wzm-Bob/vueTs.git
+# - GH_TOKEN:329d605e50f2f988bdcd0dd3addaec049c27cfdb
+#- P_BRANCH:gh-pages
+# - U_EMILE:17797592879@189.cn
+# - U_NAME:wzm-Bob
