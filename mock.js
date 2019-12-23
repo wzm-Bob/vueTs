@@ -5,7 +5,7 @@ const Random = Mock.Random
 var listData = function () {
     let _data = []
     for (let i = 0; i < 20; i++) {
-        let newList = { // 详细 规则 参照mockjs官网
+        let newList = { // 详细 规则 参照mockjs官网ssssss
             title: Random.csentence(5, 30), //  Random.csentence( min, max )
             imgSrc: Random.dataImage('200x160', '这是图片中的文本'), // Random.dataImage( size, text ) 生成图片（base64位数据格式）
             author_name: Random.cname(), // Random.cname() 随机生成中文名
