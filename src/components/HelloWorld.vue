@@ -1,6 +1,6 @@
 <template>
   <div>
-    {{ msg }}
+    {{ msg }}静态数据可以冻结
   </div>
 </template>
 
