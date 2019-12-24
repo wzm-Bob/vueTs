@@ -1,7 +1,7 @@
 import chai, { expect } from "chai";
-import { shallowMount } from "@vue/test-utils";
+import { shallowMount,mount } from "@vue/test-utils";
 import login from "@/views/global-login/index.vue";
-//import sinon from "sinon";
+import sinon from "sinon";
 import sinonChai from 'sinon-chai'
 chai.use(sinonChai)
 describe("login.vue", () => {
